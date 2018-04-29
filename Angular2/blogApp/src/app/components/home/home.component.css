@@ -1,0 +1,22 @@
+#container {
+  width: 100%;
+  margin: 5em auto;
+  padding: 0;
+  background:#fff;
+}
+
+.items {
+  width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+#left, #right { 
+  margin: 30px;
+}
+
+.caption{
+  /*background-color: #DCDCDC;*/
+  text-align: center;
+}
+

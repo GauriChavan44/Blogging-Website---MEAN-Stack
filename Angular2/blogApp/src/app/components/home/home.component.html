@@ -1,0 +1,111 @@
+<div [@flyIn] = "in" id="container">
+    <div
+      ng2-carouselamos
+      class="slides-wrapper"
+      [items]="items"
+      [width]="1100"
+      [$prev]="prev"
+      [$next]="next"
+      [$item]="item"
+    >
+    </div>
+  <ng-template #prev>
+    <img src="assets/left-arrow.png" id="left" />
+  </ng-template>
+  <ng-template #next>
+    <img src="assets/right-arrow.png" id="right" />
+  </ng-template>
+  <ng-template #item let-item let-i="index">
+
+      <div class="items">
+          <div class="caption">
+            <h3>{{item.title}}</h3>
+            <p>{{item.caption}}</p>
+          </div>
+        <img width="1100" height="500" src="{{ item.name }}">       
+      </div>
+
+  </ng-template>
+</div>
+<div class="container">
+        <div [@flyIn2] = "in" class="row" >
+           
+           <div class="col-md-4 col-sm-6">
+                <h2><span class="badge badge-secondary">World</span></h2>
+              <div class="card">
+                 <img  class="card-img-top" src="/assets/img4.jpg" alt="Globe" style="width:100%; height:300px">
+                 <div class="card-body">
+                    <h4  class="card-title">Globe</h4>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.s</p>
+                 </div>
+              </div>
+           </div>
+           
+           <div class="col-md-4 col-sm-6">
+                <h2><span class="badge badge-secondary">Technology</span></h2>
+              <div class="card">
+                 <img class="card-img-top" src="/assets/img7.jpg" alt="iPhone X" style="width:100%; height:300px">
+                 <div class="card-body">
+                    <h4 class="card-title">iPhone X</h4>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                 </div>
+              </div>
+           </div>
+           
+           <div class="col-md-4 col-sm-6">
+                <h2><span class="badge badge-secondary">Health</span></h2>
+              <div class="card">
+                 <img class="card-img-top" src="/assets/img10.jpg" alt="Healthy Breakfast" style="width:100%; height:300px">
+                 <div class="card-body">
+                    <h4 class="card-title">Healthy Breakfast</h4>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <br/>
+        <div [@flyIn3] = "in" class="row" >
+           <!--[@flyInOut] = "in"-->
+           <div class="col-md-4 col-sm-6">
+                <h2><span class="badge badge-secondary">Science</span></h2>
+              <div class="card">
+                 <img class="card-img-top" src="/assets/img15.jpg" alt="Science" style="width:100%; height:300px">
+                 <div class="card-body">
+                    <h4 class="card-title">Molecules</h4>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                 </div>
+              </div>
+           </div>
+           
+           <div class="col-md-4 col-sm-6">
+                <h2><span class="badge badge-secondary">Travel</span></h2>
+              <div class="card">
+                 <img class="card-img-top" src="/assets/img17.jpg" alt="Beach Life" style="width:100%; height:300px">
+                 <div class="card-body">
+                    <h4 class="card-title">Travel Guide</h4>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                 </div>
+              </div>
+           </div>
+
+           <div class="col-md-4 col-sm-6">
+                <h2><span class="badge badge-secondary">Politics</span></h2>
+              <div class="card">
+                 <img class="card-img-top" src="/assets/img19.jpg" alt="Beach Life" style="width:100%; height:300px">
+                 <div class="card-body">
+                    <h4 class="card-title">March for our Lives</h4>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <br/>
+        <div [@flyIn3] = "in" class="row" >
+            <div class="col-md-12 col-sm-6 text-center">
+                <div class="nav-item">
+                    <a *ngIf="!authService.loggedIn()" routerLink="/login" class="btn btn-success btn-lg btn-block">Create Your Blog!</a>
+                </div>
+            </div>
+        </div>
+</div>
+<br/>
